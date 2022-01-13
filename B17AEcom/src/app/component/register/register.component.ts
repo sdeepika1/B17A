@@ -12,6 +12,10 @@ export class RegisterComponent implements OnInit {
 
   profileForm = this.formBuilder.group({
     firstName: [''],
+    lastName: [''],
+    userName: [''],
+    password: [''],
+    confrimPassword: [''],
   })
 
 

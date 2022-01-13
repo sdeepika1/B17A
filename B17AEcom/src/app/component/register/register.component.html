@@ -1,16 +1,35 @@
-<!-- <form [formGroup]="profileForm" class="form-container">
+<form [formGroup]="profileForm" class="form-container">
     <mat-card>
-        <mat-card-header>
-            <mat-card-tittle>Register</mat-card-tittle>
-        </mat-card-header>
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div>
+                    <mat-card-title>Register</mat-card-title>
+                </div>
+                <div>
+                    <mat-card-subtitle>Already Registered?</mat-card-subtitle>
+                </div>
+            </mat-card-header>
+        </mat-card>
         <mat-card-content>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <mat-form-field class="full-width">
-                     <input formControlName= "fisrtName" matInput placeholder="First name">
+                        <input formControlName="fisrtName" matInput placeholder="First name">
                     </mat-form-field>
-                </div>
+                    <mat-form-field class="full-width">
+                        <input formControlName="lastName" matInput placeholder="Last name">
+                    </mat-form-field>
+                    <mat-form-field class="full-width">
+                        <input formControlName="userName" matInput placeholder="User name">
+                    </mat-form-field>
+                    <mat-form-field class="full-width">
+                    <input formControlName="password" matInput placeholder="Password">
+                    </mat-form-field>
+                    mat-form-field class="full-width">
+                    <input formControlName="confirmPassword" matInput placeholder="Confimr Password">
+                    </mat-form-field>
+                </div>    
             </div>
-        <!-- </mat-card-content> -->
-    <!-- </mat-card> 
-</form> --> -->
+        </mat-card-content>
+    </mat-card>
+</form>
