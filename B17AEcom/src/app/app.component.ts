@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// import { FormBuilder } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'B17AEcom';
-  // constructor(private formBuilder:FormBuilder) { }
+  constructor(private formBuilder:FormBuilder) { }
 
-  // profileForm = this.formBuilder.group({
-  //   firstName: [''],
-  // })
+  profileForm = this.formBuilder.group({
+    firstName: [''],
+  })
 }
