@@ -1,12 +1,46 @@
-.example-card {
-    max-width: 400px;
-    background-color: pink;
-  }
-
-mat-card-title, mat-card-subtitle{
-    display: inline-block;
+.container {
+  width: 43%;
+  margin-top: 70px;
 }
 
-mat-card-content{
-    border-radius: 20px;
+mat-card-title {
+  font-size: 26px;
+  margin-top: 18px;
+  margin-left: 10px;
+}
+
+mat-card-subtitle {
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+.New {
+  background-color: #ff4081;
+  height: 60px;
+}
+
+mat-card {
+  box-shadow: currentColor;
+}
+
+.com2 {
+  height: 460px
+}
+
+#userVal {
+  color: #f44336;
+  font-size: 10.5px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-radio-button~.mat-radio-button {
+  margin-left: 16px;
+}
+
+mat-label {
+  margin-right: 10px;
+}
+
+mat-form-field {
+  width: 600px;
 }

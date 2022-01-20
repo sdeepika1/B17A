@@ -1,0 +1,85 @@
+<ng-container *ngIf="products.length !=0">
+    <div class="container">
+        <mat-card class="com">
+            <p class="fs-1 text-light inline">Cart item</p>
+            <button class="inline right" mat-raised-button (click)="emptycart()">Clear cart</button>
+        </mat-card>
+    </div>
+    <div class="container">
+        <mat-card>
+            <mat-card-content>
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>MRP</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                </table>
+            </mat-card-content>
+            <table class="content-body">
+                <tbody>
+                    <tr *ngFor="let item of products; let i = index">
+                        <mat-card-content>
+                            <td><img style="width: 100px;"
+                                    src="https://bookcart.azurewebsites.net/Upload/{{item.coverFileName}}"></td>
+                            <td>{{item.title}}</td>
+                            <td>{{item.price}}</td>
+                            <td>
+                                <div class="btn-minus"><button [disabled]="item.quantity < 2 ? true : false"
+                                        mat-icon-button color="warn" (click)="removeItem(item.product.productId)">
+                                        <mat-icon>remove_circle</mat-icon>
+                                    </button>
+                                </div>
+                                {{item.quantity}}
+                                <div class="btn-plus"><button mat-icon-button color="warn"
+                                        (click)="addtocart(item.product.productId)">
+                                        <mat-icon>add_circle</mat-icon>
+                                    </button>
+                                </div>
+                            </td>
+                            <td>{{item.total}}</td>
+                            <td><button (click)="removeItem(item)" class="btn btn-white"><span class="material-icons">
+                                        delete
+                                    </span></button></td>
+                        </mat-card-content>
+                    </tr>
+                </tbody>
+                <tfoot class="footer">
+                    <tr>
+                        <mat-card-content>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Cart Total:</td>
+                            <td>{{cartTotal| currency : 'INR' }}</td>
+                            <td>
+                                <button mat-raised-button color="warn">CheckOut</button>
+                            </td>
+                        </mat-card-content>
+                    </tr>
+                </tfoot>
+            </table>
+        </mat-card>
+    </div>
+
+</ng-container>
+
+
+
+
+<ng-container *ngIf="products.length ==0">
+    <div class="container">
+        <mat-card class="com">
+            <p class="fs-1 text-light">Cart item</p>
+        </mat-card>
+        <mat-card class="com2">
+            <h1 style="font-size: 35px;">Shopping cart is empty</h1>
+            <button routerLink="/products" class="btn btn-primary">Continue shopping</button>
+        </mat-card>
+    </div>
+</ng-container>

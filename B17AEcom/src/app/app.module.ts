@@ -7,6 +7,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatTableModule} from '@angular/material/table';
+import {MatBadgeModule} from '@angular/material/badge';
 
 
 
@@ -14,7 +18,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CartComponent } from './component/cart/cart.component';
+import { HeaderComponent } from './component/header/header.component';
+import { ProductsComponent } from './component/products/products.component'
 
 
 
@@ -23,7 +30,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CartComponent,
+    HeaderComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +47,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatIconModule,
+    MatRadioModule,
+    MatSnackBarModule,
+    MatTableModule,
+    MatBadgeModule,
+    
 
 
   ],

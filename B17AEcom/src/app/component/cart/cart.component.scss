@@ -1,0 +1,47 @@
+.mat-card-content {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+    
+    // justify-content: space-between;
+}
+
+th {
+    width: 14%;
+}
+td {
+    width: 17%;
+    align-items: center;
+}
+
+.content-body {
+    width: 100%;
+}
+
+.com {
+    
+    font-size: 20px;
+    background-color: #ff4081;
+}
+
+.com2 {
+    height: 18vh;
+}
+
+.inline{
+    display: inline-block;
+}
+
+.right{
+    float: right;
+}
+.material-icons{
+    color: rgb(228, 42, 73);
+    font-size: 40px;
+}
+
+.btn-minus, .btn-plus{
+    display: inline-block;
+    align-items: center;
+}
