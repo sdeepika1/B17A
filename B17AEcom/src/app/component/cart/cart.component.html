@@ -23,27 +23,27 @@
             </mat-card-content>
             <table class="content-body">
                 <tbody>
-                    <tr *ngFor="let item of products; let i = index">
+                    <tr *ngFor="let item of products;">
                         <mat-card-content>
                             <td><img style="width: 100px;"
                                     src="https://bookcart.azurewebsites.net/Upload/{{item.coverFileName}}"></td>
                             <td>{{item.title}}</td>
                             <td>{{item.price}}</td>
                             <td>
-                                <div class="btn-minus"><button [disabled]="item.quantity < 2 ? true : false"
-                                        mat-icon-button color="warn" (click)="removeItem(item.product.productId)">
-                                        <mat-icon>remove_circle</mat-icon>
+                                <div class="btn-plus">
+                                    <button mat-icon-button color="warn" click="plus()">
+                                        <mat-icon>add_circle</mat-icon>
                                     </button>
                                 </div>
                                 {{item.quantity}}
-                                <div class="btn-plus"><button mat-icon-button color="warn"
-                                        (click)="addtocart(item.product.productId)">
-                                        <mat-icon>add_circle</mat-icon>
+                                <div class="btn-minus">
+                                    <button mat-icon-button color="warn" click="minus()" >
+                                        <mat-icon>remove_circle</mat-icon>
                                     </button>
                                 </div>
                             </td>
                             <td>{{item.total}}</td>
-                            <td><button (click)="removeItem(item)" class="btn btn-white"><span class="material-icons">
+                            <td><button (click)="removeItem(item)" class="btn btxn-white"><span class="material-icons">
                                         delete
                                     </span></button></td>
                         </mat-card-content>
@@ -83,3 +83,5 @@
         </mat-card>
     </div>
 </ng-container>
+
+
